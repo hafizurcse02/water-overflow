@@ -62,7 +62,8 @@ sh test.sh
 It will output similar to:
 
 ```
-
+(some lines are omitted)
+...
   18 passing (37ms)
 
 --------------------------|----------|----------|----------|----------|-------------------|
