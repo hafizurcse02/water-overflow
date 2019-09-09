@@ -8,12 +8,12 @@ In summerry, we make the following considerations:
 * while seeking water volume of (i,j)th glass, j-coordinate is not necessary hence it will not be used.
 
 ## How to Run
-### 1. Install Dependencies
+### Step 1: Install dependencies
 In the project folder, open a terminal and run:
 ```
 npm i
 ```
-### 2. `cd` to `bin`
+### Step 2: `cd` to `bin`
 Go to the project folder and then `cd` to `bin`. Then open `demo.sh` in an editor. Set the necessary parameter to the desired values for evaluating the solution.
 Example:
 `demo.sh`
@@ -40,7 +40,7 @@ COLUMN_SOUGHT -> `j-th column of the glass water`
 
 *Note:* The user can choose either litre('l' or 'L') or millilitre('ml' or 'ML') as unit of the input volume. That means, solution accepts input volume such as 10 L or 10000 ml. It also accepts float number as volume (e.g., 5.5 L, 1250.5 ML).
 
-### 3. Run the demo
+### Step: Run the demo
 ```
 sh demo.sh
 ```
