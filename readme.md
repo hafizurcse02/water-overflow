@@ -95,7 +95,7 @@ eslint ./ --fix
 ```
 `eslint ./` finds the linting errors and `eslint ./ --fix` attempts to fix automatically.
 
-## Production Ready Suggestion
+## Production Ready Suggestions
     * The solution can be prepared as a AWS Lambda function
     * The Lambda function will have one API endpint (in an API Gateway) and will accept a JSON object in a HTTP POST
     * The Lambda will calculate the water volume of (i,j) glass and sends the response
