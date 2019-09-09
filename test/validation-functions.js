@@ -82,15 +82,6 @@ describe('validation-functions', () => {
             }).to.throw(`${key} of the glass must be a number`);
         });
     
-        it.skip('Throws an error on column number of the glass as negative', () => {
-        });
-    
-        it.skip('Throws an error on column number of the glass as float', () => {
-        });
-    
-        it.skip('Gets the column value on positive integer', () => {
-        });
-
         it('Extracts the float value of pouring volume', () => {
             let key = 'pouringVolume';
             let value = '5.50';

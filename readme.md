@@ -54,3 +54,12 @@ Run all tests recursively.
 ```
 npm test
 ```
+
+## Test Coverage
+```
+npm coverage
+```
+The above may not work on windows. In that case, try:
+```
+nyc npm run test
+```
