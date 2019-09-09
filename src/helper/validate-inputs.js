@@ -1,4 +1,4 @@
-const inputKeys = ['pouringVolume', 'rowNum', 'columnNum'];
+const inputKeys = ['pouringVolume', 'pouringVolumeUnit', 'rowNum', 'columnNum'];
 const vFunctions = require('./validation-functions');
 
 /**
@@ -8,14 +8,15 @@ const vFunctions = require('./validation-functions');
  */
 let validateInputs = function(args) {
     let inputArgs = {};
-    if (args.length < 5) {
+    if (args.length < 6) {
         throw "Please enter the required number of arguments"
     }
     for (let i = 2; i < args.length; i++) {
         inputArgs[inputKeys[i-2]] = args[i];
     }
-    inputArgs.pouringVolumeUnit = vFunctions.extractVolumeUnit(inputArgs.pouringVolume)
-    inputArgs.pouringVolume = vFunctions.extractPouringVolume(inputArgs.pouringVolume);
+    inputArgs.pouringVolumeUnit = vFunctions.extractVolumeUnit(inputArgs.pouringVolumeUnit)
+    // inputArgs.pouringVolume = vFunctions.extractPouringVolume(inputArgs.pouringVolume);
+    inputArgs.pouringVolume = vFunctions.validateNFN('pouringVolume', inputArgs.pouringVolume);
     inputArgs.rowNum = vFunctions.validateNFN('rowNum', inputArgs.rowNum);
     inputArgs.columnNum = vFunctions.validateNFN('columnNum', inputArgs.columnNum);
 

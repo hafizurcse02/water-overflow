@@ -45,7 +45,7 @@ The code will extract the user supplied arguments as:
     {
         rowNum: 3,
         columnNum: 2,
-        pouringVolume : 250,
+        pouringVolume : 1000,
         pouringVolumeUnit: "ml"
     }
 ```
