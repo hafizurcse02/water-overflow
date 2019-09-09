@@ -1,56 +1,87 @@
 # Water-Overflow
-## How to run:
+## How to Run
+### 1. Install Dependencies
+```
+npm i
+```
+### 2. `cd` to `bin`
+Go to the project folder and then `cd` to `bin`. Then open `demo.sh` in an editor. Set the necessary parameter to your desired values.
+Example:
+`demo.sh`
+```
+export GLASS_VOLUME_ML=250 # volume of each glass in millilitre
+export MAX_NUM_ROWS=10 
+INPUT_VOLUME=10
+INPUT_VOLUME_UNIT=L
+ROW_SOUGHT=9
+COLUMN_SOUGHT=1
+```
+Here 
+GLASS_VOLUME_ML -> `volume of each glass in millilitre` 
 
-**Syntax**:
+MAX_NUM_ROWS -> `depth of the glass stack` or `number of rows`
 
-The user can run the code in following command line format
-```
-node file_name.js POURING_VOLUME ROW_NUM COL_NUM
-```
+INPUT_VOLUME -> `input water volume`
 
-Example 1:
+INPUT_VOLUME_UNIT -> `unit of water volume`
 
-```
-node demo-water-overflow.js 10L 3 2
-```
-means the user is inputting:
-* 10L: 10 litres as pouring volume 
-* 3 as location of the glass at ith row 
-* 2 as location of the glass at jth column
+ROW_SOUGHT -> `i-th row position of the glass water`
 
-The code will extract the user supplied arguments as:
-```
-    {
-        rowNum: 3,
-        columnNum: 2,
-        pouringVolume : 250,
-        pouringVolumeUnit: "ml"
-    }
-```
+COLUMN_SOUGHT -> `j-th column of the glass water`
 
-Example 2:
+*Note:* The user can choose either litre('l' or 'L') or millilitre('ml' or 'ML') as unit of the input volume. 
 
+### 3. Run the demo
 ```
+sh demo.sh
 ```
-node demo-water-overflow.js 1000ML 3 2
+For the above setting, it will generate:
 ```
-means the user is inputting:
-* 1000ML: 1000 millilitres as pouring volume 
-* 3 as location of the glass at ith row 
-* 2 as location of the glass at jth column
-```
-
-The code will extract the user supplied arguments as:
-```
-    {
-        rowNum: 3,
-        columnNum: 2,
-        pouringVolume : 1000,
-        pouringVolumeUnit: "ml"
-    }
+inputArgs =  { pouringVolume: 10,
+  pouringVolumeUnit: 'l',
+  rowNum: 9,
+  columnNum: 1 }
+water at ith glass =  111.11111111111111
 ```
 ## Test
-Run all tests recursively.
+### 1. Install Test Runner
+To run the tests, the `mocha` and `nyc` runner have to be installed in the machine. In the terminal, run:
+
 ```
-npm test
+npm install mocha -g
+npm install nyc -g
 ```
+
+### 2. Tests & Coverage
+`cd` to `bin` folder in your terminal, and then execute:
+
+```
+sh test.sh
+```
+
+It will output similar to:
+
+```
+(some lines are omitted)
+...
+  18 passing (37ms)
+
+--------------------------|----------|----------|----------|----------|-------------------|
+File                      |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+--------------------------|----------|----------|----------|----------|-------------------|
+All files                 |      100 |      100 |      100 |      100 |                   |
+ src                      |      100 |      100 |      100 |      100 |                   |
+  water-overflow.js       |      100 |      100 |      100 |      100 |                   |
+ src/helper               |      100 |      100 |      100 |      100 |                   |
+  validate-inputs.js      |      100 |      100 |      100 |      100 |                   |
+  validation-functions.js |      100 |      100 |      100 |      100 |                   |
+--------------------------|----------|----------|----------|----------|-------------------|
+```
+
+## Linting
+In the terminal, run:
+```
+eslint ./
+eslint ./ --fix
+```
+`eslint ./` finds the linting errors and `eslint ./ --fix` attempts to fix automatically.
