@@ -29,11 +29,11 @@ vFunctions.validateNFN = function (key , value) {
  * @returns {STRING}: extracted unit of the pouring amount
  */
 vFunctions.extractVolumeUnit = function(pouringVolumeUnit) {
-    pouringVolumeUnit = pouringVolumeUnit.toLowerCase();
-    if (allowedVolumeUnits.indexOf(pouringVolumeUnit) < 0) {
+    let unit = pouringVolumeUnit.toLowerCase();
+    if (allowedVolumeUnits.indexOf(unit) < 0) {
         throw new Error('Pouring volume unit must be ml or l');
     }
-    return pouringVolumeUnit;
+    return unit;
 };
 
 module.exports = vFunctions;

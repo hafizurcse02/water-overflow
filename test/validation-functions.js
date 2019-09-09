@@ -1,7 +1,8 @@
 const vFunctions = require('./../src/helper/validation-functions');
 describe('validation-functions', () => {
     describe('extractVolumeUnit', () => {
-        it.skip('Accepts uppercase (L) as a unit to glass volume', () => {
+        it('Accepts uppercase (L) as a unit to glass volume', () => {
+
         });
     
         it.skip('Accepts uppercase (l) as a unit to glass volume', () => {
