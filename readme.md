@@ -50,16 +50,21 @@ The code will extract the user supplied arguments as:
     }
 ```
 ## Test
-Run all tests recursively.
+### Install Test Runner
+To run the tests, the `mocha` and `nyc` runner have to be installed in the machine. In the terminal, run:
+
 ```
-npm test
+npm install mocha -g
+npm install nyc -g
 ```
 
-## Test Coverage
+### Run Tests
+Run all tests recursively.
 ```
-npm coverage
+npm run test
 ```
-The above may not work on windows. In that case, try:
+
+### Test Coverage
 ```
-nyc npm run test
+npm run coverage
 ```
