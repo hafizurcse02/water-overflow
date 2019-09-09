@@ -29,7 +29,7 @@ ROW_SOUGHT -> `i-th row position of the glass water`
 
 COLUMN_SOUGHT -> `j-th column of the glass water`
 
-*Note:* The user can choose either litre('l') or millilitre('ml') as unit of the input volume. 
+*Note:* The user can choose either litre('l' or 'L') or millilitre('ml' or 'ML') as unit of the input volume. 
 
 ### 3. Run the demo
 ```
