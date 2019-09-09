@@ -12,6 +12,15 @@ describe('validate-inputs', () => {
                 validateInputs(args);
             }).to.throw('Please enter the required number of arguments');
         });
+
+        it('Throws an error on column number is larger than row number', () => {
+            let args = ['C:\\path\\to\\node\\node.exe', 
+                        'C:\\path\to\\code\\validate-inputs.js',
+                        '500', 'ml', '3', '5'];
+            expect(function(){
+                validateInputs(args);
+            }).to.throw('Column number must be less than or equal to row number');
+        });
         
         it('Gets the extracted input arguments as json', () => {
             let args = ['C:\\path\\to\\node\\node.exe', 

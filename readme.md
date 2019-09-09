@@ -68,3 +68,11 @@ npm run test
 ```
 npm run coverage
 ```
+
+## Linting
+In the terminal, run:
+```
+eslint ./
+eslint ./ --fix
+```
+`eslint ./` finds the linting errors and `eslint ./ --fix` attempts to fix automatically.

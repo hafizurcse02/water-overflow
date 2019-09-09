@@ -1,4 +1,12 @@
 const WaterOverflow = require('./water-overflow');
-let wf = new WaterOverflow(5, 5);
-let amount = wf.calculate(1, 'l', 3);
-console.log(amount);
+const validateInput = require('./helper/validate-inputs');
+let waterOverflow = new WaterOverflow(parseInt(process.env.MAX_NUM_ROWS));
+
+// let inputVolume = parseFloat(process.env.INPUT_VOLUME);
+// let inputVolumeUnit = process.env.INPUT_VOLUME_UNIT;
+// let rowNumber = parseInt(process.env.ROW_SOUGHT);
+
+let inputArgs = validateInput(process.argv);
+console.log('inputArgs = ', inputArgs);
+let amount = waterOverflow.calculate(inputArgs.pouringVolume, inputArgs.pouringVolumeUnit, inputArgs.rowNum, inputArgs.columnNum);
+console.log('water at ith glass = ', amount);
