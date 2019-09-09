@@ -4,4 +4,4 @@ export GLASS_VOLUME_ML=250 # volume of each glass in millilitre
 npm run test
 
 # test coverage
-# npm run coverage
+npm run coverage
