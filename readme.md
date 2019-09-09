@@ -17,13 +17,19 @@ ROW_SOUGHT=9
 COLUMN_SOUGHT=1
 ```
 Here 
-GLASS_VOLUME_ML -> `volume of each glass in millilitre` MAX_NUM_ROWS -> `depth of the glass stack` or `number of rows`
+GLASS_VOLUME_ML -> `volume of each glass in millilitre` 
+
+MAX_NUM_ROWS -> `depth of the glass stack` or `number of rows`
+
 INPUT_VOLUME -> `input water volume`
+
 INPUT_VOLUME_UNIT -> `unit of water volume`
+
 ROW_SOUGHT -> `i-th row position of the glass water`
+
 COLUMN_SOUGHT -> `j-th column of the glass water`
 
-Note: The user can choose either litre('l') or millilitre('ml') as unit of the input volume. 
+*Note:* The user can choose either litre('l') or millilitre('ml') as unit of the input volume. 
 
 ### 3. Run the demo
 ```
