@@ -95,12 +95,12 @@ eslint ./ --fix
 ```
 `eslint ./` finds the linting errors and `eslint ./ --fix` attempts to fix automatically.
 
-# Production Ready Suggestion
+## Production Ready Suggestion
     * The solution can be prepared as a AWS Lambda function
-    * The Lambda function will have one API endpint and will accept a JSON object in a HTTP POST
+    * The Lambda function will have one API endpint (in an API Gateway) and will accept a JSON object in a HTTP POST
     * The Lambda will calculate the water volume of (i,j) glass and sends the response
 
-# Deployment Suggestions
-The proposed lambda can be deployed in AWS infrastructure using either of the followings:
+## Deployment Suggestions
+The proposed Lambda can be deployed in AWS infrastructure using either of the followings:
     1. [AWS Serverless Application Model (SAM) Template](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-template-basics.html)
     2. [Serverless framework](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjw_N2L6MTkAhXPgHAKHQHxC-8YABAAGgJzYg&ohost=www.google.com&cid=CAESEeD2hELyw-ln42kWo_GYXQfK&sig=AOD64_2Lx6erIve8moDUdvO8sAraVl7x-g&q=&ved=2ahUKEwi86daL6MTkAhXEbSsKHd4AD-IQ0Qx6BAgrEAE&adurl=)
