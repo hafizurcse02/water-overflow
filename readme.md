@@ -4,11 +4,12 @@ The number of glasses in each row is equal to the row number. For example, row n
 
 In summerry, we make the following considerations:
 * each glass in the stack is of equal size and configurable
-* since water is evenly distributed amount the glasses, seeking water volume in (i,j) location is same as seeking water volume of all glasses at i-th row divided by the total number of glasses in the same row.
-* while seeking water at (i,j)th glass, j-coordinate will not be used.
+* since water is evenly distributed amount the glasses, seeking water volume in (i,j) location is same as seeking water volume of all glasses at i-th row divided by the total number of glasses in the same row. 
+* while seeking water volume of (i,j)th glass, j-coordinate is not necessary hence it will not be used.
 
 ## How to Run
 ### 1. Install Dependencies
+In the project folder, open a terminal and run:
 ```
 npm i
 ```
@@ -53,7 +54,7 @@ water at (9, 1) glass =  111.11111111111111
 ```
 ## Test
 ### 1. Install Test Runner
-To run the tests, the `mocha` and `nyc` runner have to be installed in the machine. In the terminal, run:
+To run the tests, the `mocha` and `nyc` runner have to be installed in the machine in `global` mode. In the terminal, run:
 
 ```
 npm install mocha -g
