@@ -8,6 +8,16 @@
     "coverage": "nyc npm run test"
   },
   "author": "Hafizur Rahman",
+  "contributors": [
+    {
+      "name": "Hafizur Rahman",
+      "email": "hafizurcse02@gmail.com"
+    }],
+  "homepage": "https://github.com/hafizurcse",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:hafizurcse02/water-overflow.git"
+  },
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.2.0",
