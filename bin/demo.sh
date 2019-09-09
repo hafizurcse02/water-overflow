@@ -1,0 +1,7 @@
+export GLASS_VOLUME_ML=250 # volume of each glass in millilitre
+export MAX_NUM_ROWS=10
+INPUT_VOLUME=10
+INPUT_VOLUME_UNIT=L
+ROW_SOUGHT=9
+COLUMN_SOUGHT=1
+node ./../src/demo-water-overflow.js $INPUT_VOLUME $INPUT_VOLUME_UNIT $ROW_SOUGHT $COLUMN_SOUGHT
