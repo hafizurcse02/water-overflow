@@ -40,7 +40,7 @@ COLUMN_SOUGHT -> `j-th column of the glass water`
 
 *Note:* The user can choose either litre('l' or 'L') or millilitre('ml' or 'ML') as unit of the input volume. That means, solution accepts input volume such as 10 L or 10000 ml. It also accepts float number as volume (e.g., 5.5 L, 1250.5 ML).
 
-### Step: Run the demo
+### Step 3: Run the demo
 ```
 sh demo.sh
 ```
