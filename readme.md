@@ -52,7 +52,9 @@ inputArgs =  { pouringVolume: 10,
   columnNum: 1 }
 water at (9, 1) glass =  111.11111111111111
 ```
+
 ## Test
+
 ### 1. Install Test Runner
 To run the tests, the `mocha` and `nyc` runner have to be installed in the machine in `global` mode. In the terminal, run:
 
